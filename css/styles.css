@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+
+:root {
+  --vermelho: #E50914;
+  --preta: #141414;
+}
+
+/* elementos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--preta);
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+}
+
+
+/* NAVBAR */
+
+header .container {
+  display: flex; /*joga para linha*/
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo{
+  margin-left: 5px;
+  color: var(--vermelho);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #AAA;
+  margin-right: 10px;
+}
+
+/* mouse sobre */
+header nav a:hover {
+  color: #fff;
+}
+
+/*filme principal*/
+
+.filme-principal {
+  font-size: 16px;
+  background: /* linear-gradient criar camada mais escura entre imagem e texto */
+              linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%),
+              url('/img/thewalkingdead.jpg');
+  height: 400px;
+  /* cobre toda extensao  */
+  background-size: cover;
+
+  /* display: flex ajeita elementos como linha */
+  display: flex;
+  /* escolho como quero que o display funcione */
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.filme-principal .sinopse {
+  margin-bottom: 5%;
+}
+
+.titulo {
+  margin-top: 10%;
+  font-size: 40px;
+  font-family: 'Bree Serif', serif;
+}
+
+.button {
+  /* rgba cria transparencia */
+  background-color: rgba(0,0,0,.50);
+  border: none;
+  color: white;
+
+  padding: 15px;
+  margin-right: 15px;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  /* transição entre animação */
+  transition: .3s ease all;
+}
+
+.button:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.button i {
+  margin-right: 8px;
+}
+
+.container {
+  margin-left: 20px;
+}
+
+.filme-principal .container {
+  width: 70%;
+}
+
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.carrosel-filmes {
+  margin-top: 5px;
+}
